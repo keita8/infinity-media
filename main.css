@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+
+  /**
+   * colors
+   */
+
+  --rich-black-fogra-29: hsl(225, 25%, 9%);
+  --rich-black-fogra-39: hsl(170, 21%, 5%);
+  --raisin-black: hsl(228, 13%, 15%);
+  --eerie-black: hsl(207, 19%, 11%);
+  --light-gray: hsl(0, 3%, 80%);
+  --gunmetal-1: hsl(229, 15%, 21%);
+  --gunmetal-2: hsl(216, 22%, 18%);
+  --gainsboro: hsl(0, 7%, 88%);
+  --citrine: hsl(57, 97%, 45%);
+  --xiketic: hsl(253, 21%, 13%);
+  --gray-x: hsl(0, 0%, 74%);
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --jet: hsl(0, 0%, 20%);
+
+  /**
+   * typography
+   */
+
+  --ff-poppins: 'Poppins', sans-serif;
+
+  --fs-1: 36px;
+  --fs-2: 32px;
+  --fs-3: 30px;
+  --fs-4: 24px;
+  --fs-5: 20px;
+  --fs-6: 18px;
+  --fs-7: 16px;
+  --fs-8: 15px;
+  --fs-9: 14px;
+  --fs-10: 13px;
+  --fs-11: 12px;
+  --fs-12: 11px;
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.15s ease;
+  --transition-2: 0.25s ease-in;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 100px;
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+ * #RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { 
+    text-decoration: none; 
+    color:  #fff;
+}
+
+select,
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+ font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+*, :after, :before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { background: var(--eerie-black); }
+
+
+.container{
+
+    display: grid;
+    /* padding: 30px; */
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto ;
+    grid-template-areas: "entete "
+                         "principal "
+                         "pied-page" ;
+}
+
+
+
+section .aa{
+    display: flex;
+    /* width: 80%; */
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    color: var(--gainsboro);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+}
+
+/* .aa div{
+    margin: 0 auto;
+} */
+
+section div{
+    margin: 20px;
+}
+
+section .aa div,
+section .c div,
+section .b div{
+    width: 175px;
+    height: 235px;
+    margin: 20px!important;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+section .aa div:nth-child(1){
+    background-color: olive;
+}
+section .aa div:nth-child(2){
+    background-color: blue;
+}
+section .aa div:nth-child(3){
+    background-color: black;
+}
+
+section .b {
+    text-align: center!important;
+    width: 85%;
+    height: 43px;
+    background-color: #f4e7e7;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: -5px 5px 15px 5px #000000;
+}
+
+section .b p{
+    text-align: center;
+    line-height: 8px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+section .c{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section .c div:nth-child(1){
+    background-color: olive;
+}
+section .c div:nth-child(2){
+    background-color: blue;
+}
+section .c div:nth-child(3){
+    background-color: black;
+}
+
+header{
+    grid-area: entete;
+    margin-bottom: 30px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    /* flex-direction: column; */
+}
+
+.logo-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    margin: 20px;
+    padding: 15px;
+}
+
+.menu p{
+    text-align: right;
+}
+
+.nav ul li a{
+    display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: white;
+	cursor: pointer; 
+}
+
+header .nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	list-style-type: none; 
+}
+
+li{
+    list-style: none;
+
+}
+
+header .logo{
+
+}
+
+.list-media{
+    display: flex;
+    gap: 5px;
+}
+
+section{
+    grid-area: principal;
+}
+footer{
+    grid-area: pied-page;
+    /* width: auto; */
+    /* height: 219px; */
+    background-color: #353131;
+}
+
+footer p{
+    margin-bottom: 10px;
+}
+
+#id > footer > div > div.social-media > ul > li > a{
+    padding: 10px
+}
+
+#id > footer > div > div.social-media > p{
+    text-align: center;
+}
+
+#id > footer > div > div.copyright > p{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+.list-media .social-media{
+    padding: 15px;
+    margin: 20px;
+}
+
+.pied-de-page{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pied-de-page .social-media p{
+    font-size: 14px;
+    line-height: 18px;
+    color: #E7D5D5;
+}
+
+.logo, .nav, .social-media, .copyright{
+    padding: 20px;
+}
+
+.menu{
+
+    padding:0 35px;
+    color: #fff;
+}
+
+.copyright{
+    align-self: flex-end;
+}
+
+/* FOR MOBILE PURPOSE ONLY */
+@media (max-width: 767px) {
+    section .aa, .c{
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    section .aa div{
+        width: 80%;
+        height: auto;
+    }
+    section .c div{
+        width: 80%;
+        height: auto;
+    }
+
+    section .aa div img{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    section .b{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    section .b p{
+        font-size: 14px;
+    }
+
+    #id > footer > div > div.copyright > p{
+        
+    font-size: 12px;
+    }
+
+    #id > header > div.logo-nav > div.nav{
+
+    }
+
+    .nav ul li a{
+    display: inline-block;
+	padding: 5px 8px;
+    font-size: 12px;
+    }
+
+    header .nav ul{justify-content: space-evenly; padding: 0; margin: 0; font-size: 15px; }
+
+    #id > header > div.logo-nav > div.logo{
+        width: 150px;
+    }
+
+    .menu{
+        font-size: 15px;
+    }
+
+}
+
+/* git push https://github.com/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@github.com/keita8/infinity-media.git */
